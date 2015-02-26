@@ -29,7 +29,7 @@ public class FrameOne extends JFrame{
     public FrameOne()
     {
         this.setSize(HIGHT, WIDTH);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.field.setColumns(50);
         this.field.setEditable(true);
         this.panel.setLayout(new GridLayout(2,1));

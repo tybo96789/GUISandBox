@@ -34,16 +34,17 @@ public class FrameTwo extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent ae) {
+                if(!INSTANCE.isVisible()) INSTANCE.setVisible(true);
                 INSTANCE.label.setText(INSTANCE.parent.getText());
             }
         });
         
         this.setSize(HIGHT, WIDTH);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.panel.setLayout(new GridLayout(2,1));
         this.panel.add(this.label);
         this.add(this.panel);
-        this.setVisible(true);
+        //this.setVisible(true);
         
     }
     
