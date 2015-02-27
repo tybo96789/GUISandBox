@@ -12,7 +12,16 @@ package GUIConnector;
 public class FrameRunner {
     
     public static void main(String[] args) {
-        new FrameTwo(new FrameOne());
+        Thread thread = new Thread("testing"){
+            @Override
+            public void run()
+            {
+                new FrameTwo(new FrameOne());
+            }
+        };
+        thread.start();
+        
+        
     }
     
 }
